@@ -1,0 +1,42 @@
+
+<h1>NgIf</h1>
+
+<input type="text" (input)="this.numero1 = $event.target.value" />
+
+<h1 *ngIf="true">Visível</h1>
+
+<h1 *ngIf="false">Invisível</h1>
+<hr>
+
+<h1 *ngIf="numero1 %2 == 0">par</h1>
+
+<h1 *ngIf="false">impar</h1>
+
+<hr>
+<h1>NgFor</h1>
+
+<h5 *ngFor="let n of arrayNumeros" > {{n}} </h5>
+
+<input type="text" (input)="this.numero2 = $event.target.value" />
+<h5 *ngFor="let x of sequencia(numero2); let i = index;" > {{i}} </h5>
+<hr>
+<ul>
+    <li *ngFor="let i of sequencia(numero2)">
+        <b> {{i}} </b>
+    </li>
+</ul>
+
+<hr>
+
+<ng-container *ngFor="let i of [].constructor(20)">🐱</ng-container>
+
+<hr>
+
+<ul>
+    <li>teste</li>
+    <li *ngFor='let loop3 of counter(5) ;let i= index'>{{i}}</li>
+  </ul>
+
+  <hr>
+
+  <!--exercicio: Percorra um array de 10 posições e liste apenas os numeros impares-->

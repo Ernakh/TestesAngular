@@ -1,0 +1,20 @@
+<p>formulario works!</p>
+
+<form [formGroup]="cadastro" >
+    <label>Nome</label>
+    <br>
+    <input type="text" formControlName="nome">
+    <br>
+    <label>Sobrenome</label>
+    <br>
+    <input type="text" formControlName="sobrenome">
+    <br>
+    <label>Idade</label>
+    <br>
+    <input type="number" formControlName="idade">
+    <br>
+</form>
+<button (click)="obter()" >Gravar</button>
+<pre>
+  {{data | json}}
+</pre>

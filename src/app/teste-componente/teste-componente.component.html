@@ -1,0 +1,11 @@
+<p>teste-componente works!</p>
+
+<input type="text" (input)="this.numero = $event.target.value" />
+<input type="text" (change)="this.numero = $event.target.value" />
+<input type="text" (blur)="this.numero = $event.target.value" />
+
+<input type="text" (input)="pegarNumero($event.target.value)" />
+
+<h1>
+{{ numero }}
+</h1>
